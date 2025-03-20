@@ -16,13 +16,13 @@
                             <label for="inputPassword">Password</label>
                         </div>
                         <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                            <a class="small" href="password.html">Forgot Password?</a>
+                            <a class="small" href="password">Forgot Password?</a>
                             <button class="btn btn-primary" type="submit" :disabled="isLoading">Login</button>
                         </div>
                     </form>
                 </div>
                 <div class="card-footer text-center py-3">
-                    <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
+                    <div class="small"><a href="register">Need an account? Sign up!</a></div>
                 </div>
             </div>
         </div>
@@ -57,8 +57,13 @@ export default {
                 );
 
                 const token = response.data.token;
+                const user = response?.data?.user;
+
+                // We need role details from the server as on the frontend side i need to check based upon the role details.
+                // assuming i get one object with two properties in it one toke and user details like role etc..
 
                 localStorage.setItem('token', token);
+                localStorage.setItem('user', user);
 
                 this.$router.push('/');
 
