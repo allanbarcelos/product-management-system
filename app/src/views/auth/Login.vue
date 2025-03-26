@@ -16,13 +16,13 @@
                             <label for="inputPassword">Password</label>
                         </div>
                         <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                            <a class="small" href="password.html">Forgot Password?</a>
+                            <router-link class="small" to="/auth/register">Forgot Password?</router-link>
                             <button class="btn btn-primary" type="submit" :disabled="isLoading">Login</button>
                         </div>
                     </form>
                 </div>
                 <div class="card-footer text-center py-3">
-                    <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
+                    <div class="small"><router-link to="/auth/register">Need an account? Sign up!</router-link></div>
                 </div>
             </div>
         </div>
