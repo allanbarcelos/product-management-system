@@ -57,3 +57,42 @@
     </div>
     </div>
 </template>
+
+
+<script>
+import  axios  from "axios";
+
+export default {
+    data() {
+        return {
+            // other fields
+            email: '',
+            password: '',
+            isLoading: false,
+            error: ''
+        }
+    },
+    methods: {
+        async register() {
+            this.isLoading = true;
+            this.error = '';
+
+            try {
+                const response = await axios.post(
+                    `${import.meta.env.VITE_API_URL}/auth/registration`,
+                    {
+                        // other fields
+                        email: this.email,
+                        password: this.password
+                    }
+                );
+
+                this.$router.push('/auth/login');
+
+            } catch (error) {
+                // add some exception
+            }
+        }
+    }
+}
+</script>
