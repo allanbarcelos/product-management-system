@@ -1,0 +1,37 @@
+{
+    "name": "app",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "start": "vite",
+        "build": "vite build",
+        "dev": "vite",
+        "preview": "vite preview"
+    
+},
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@types/react-router-dom": "^5.3.3",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0"
+  },
+  "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@reduxjs/toolkit": "^2.6.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "axios": "^1.8.3",
+    "bootstrap": "^5.3.3",
+    "jwt-decode": "^4.0.0",
+    "react-bootstrap": "^2.10.9",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.3.0",
+    "react-toastify": "^11.0.5",
+    "sass": "^1.85.1"
+  }
+}
