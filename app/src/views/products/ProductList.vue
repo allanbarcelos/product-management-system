@@ -11,12 +11,18 @@
       </div>
   
       <div class="products-grid">
-        <div class="product-card" v-for="product in products" :key="product.id">
-          <h2>{{ product.name }}</h2>
-          <p>{{ product.description }}</p>
-          <p><strong>Price:</strong> ${{ product.price.toFixed(2) }}</p>
-          <p><strong>In Stock:</strong> {{ product.stockQuantity }}</p>
-        </div>
+        <router-link
+             :to="`/products/${product.id}`"
+              class="product-card"
+              tag="div"
+              v-for="product in products"
+              :key="product.id">
+
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description }}</p>
+        <p><strong>Price:</strong> ${{ product.price.toFixed(2) }}</p>
+        <p><strong>In Stock:</strong> {{ product.stockQuantity }}</p>
+        </router-link>
       </div>
     </div>
   </template>
@@ -127,6 +133,13 @@ h1 {
   padding: 1rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   background-color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .product-card h2 {

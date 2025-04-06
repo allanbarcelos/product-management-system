@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import PrivateLayout from '@/layouts/PrivateLayout.vue'
 import AuthLayout from '@/layouts/AuthLayout.vue'
 import ProductList from '@/views/products/ProductList.vue'
+import ProductDetails from '@/views/products/ProductDetails.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,6 +39,12 @@ const router = createRouter({
           path: 'products',
           name: 'ProductList',
           component: () => import('./../views/products/ProductList.vue') 
+        },
+        {
+          path: '/products/:id',
+          name: 'ProductDetails',
+          component: () => import('./../views/products/ProductDetails.vue'),
+          meta: { requireAuth: true }
         }
       ]
     },
