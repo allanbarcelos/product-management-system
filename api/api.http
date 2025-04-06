@@ -12,8 +12,8 @@ Content-Type: application/json
 Accept: application/json
 
 {
-    "Email": "allan@barcelos.dev",
-    "Password": "aA123456@"
+    "Email": "ariel@email.com",
+    "Password": "Arielli66!"
 }
 
 ###
@@ -32,8 +32,8 @@ Content-Type: application/json
 Accept: application/json
 
 {
-    "Email": "allan@barcelos.dev",
-    "Password": "aA123456@"
+    "Email": "ariel3@email.com",
+    "Password": "Arielli66!"
 }
 
 ###
