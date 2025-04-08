@@ -30,5 +30,7 @@ namespace api.Models
 
         [Required]
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+
+        public ICollection<Category> Categories { get; set; } = new List<Category>();
     }
 }
