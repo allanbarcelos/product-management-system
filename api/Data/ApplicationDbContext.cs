@@ -8,12 +8,22 @@ namespace API.Data
 
     public class ApplicationDbContext : IdentityDbContext
     {
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
-        {         
+        {
 
         }
 
-        public DbSet<Product> Products { get; set; }
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            builder.Entity<Product>()
+                .HasMany(p => p.Categories)
+                .WithMany(c => c.Products);
+        }
     }
 
 }
