@@ -57,8 +57,13 @@ export default {
                 );
 
                 const token = response.data.token;
+                const user = response?.data?.user;
+
+                // We need role details from the server as on the frontend side i need to check based upon the role details.
+                // assuming i get one object with two properties in it one toke and user details like role etc..
 
                 localStorage.setItem('token', token);
+                localStorage.setItem('user', user);
 
                 this.$router.push('/');
 
