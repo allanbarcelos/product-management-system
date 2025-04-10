@@ -1,4 +1,6 @@
 <template>
+    <div>
+        <Notification :message="notificationMessage" :type="notificationType" @clear="notificationMessage = ''" />
     <div class="row justify-content-center">
         <div class="col-lg-5">
             <div class="card shadow-lg border-0 rounded-lg mt-5">
@@ -27,13 +29,20 @@
             </div>
         </div>
     </div>
+</div>
 </template>
 
 <script>
 import  axios  from "axios";
 import { jwtDecode } from "jwt-decode";
 
+//components
+import Notification from "@/components/Notification.vue";
+
 export default {
+    components: {
+        Notification
+    },
     data() {
         return {
             email: '',
@@ -62,8 +71,13 @@ export default {
 
                 this.$router.push('/');
 
+                this.notificationMessage = 'Login Successful';
+                this.notificationType = 'Success';
+
             } catch (error) {
-                
+                this.notificationMessage = 'Invalid Credentials.';
+                this.notificationType = 'Error';
+                this.isLoading = false;
             }
         }
     }
