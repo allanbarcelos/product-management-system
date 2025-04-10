@@ -32,21 +32,19 @@ const router = createRouter({
           path: '',
           name: 'Home',
           component: () => import('./../views/home/Home.vue')
-        }
+        },
+        {
+          path: 'products',
+          name: 'Products',
+          component: () => import('./../views/products/List.vue')
+        },
+        {
+          path: 'orders',
+          name: 'Orders',
+          component: () => import('./../views/orders/List.vue')
+        },
       ]
-    },
-    {
-  path: '/categories',
-  component: () => import('@/layouts/CategoryLayout.vue'),
-  meta: { requireAuth: true },
-  children: [
-    {
-      path: '',
-      name: 'Categories',
-      component: () => import('@/views/category/Category.vue')
     }
-  ]
-}
   ]
 });
 
