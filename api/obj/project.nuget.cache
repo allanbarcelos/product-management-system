@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "medDpFCK1ik=",
+  "dgSpecHash": "VrY7JP454F0=",
   "success": true,
-  "projectFilePath": "/Users/arshiasalehi/Downloads/product-management-system-main-2/api/api.csproj",
+  "projectFilePath": "/Users/arshiasalehi/Downloads/product-management-system/api/api.csproj",
   "expectedPackageFiles": [
     "/Users/arshiasalehi/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/arshiasalehi/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/9.0.3/microsoft.aspnetcore.authentication.jwtbearer.9.0.3.nupkg.sha512",

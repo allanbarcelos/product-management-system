@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/arshiasalehi/Downloads/product-management-system-main-2/api/api.csproj": {}
+    "/Users/arshiasalehi/Downloads/product-management-system/api/api.csproj": {}
   },
   "projects": {
-    "/Users/arshiasalehi/Downloads/product-management-system-main-2/api/api.csproj": {
+    "/Users/arshiasalehi/Downloads/product-management-system/api/api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/arshiasalehi/Downloads/product-management-system-main-2/api/api.csproj",
+        "projectUniqueName": "/Users/arshiasalehi/Downloads/product-management-system/api/api.csproj",
         "projectName": "api",
-        "projectPath": "/Users/arshiasalehi/Downloads/product-management-system-main-2/api/api.csproj",
+        "projectPath": "/Users/arshiasalehi/Downloads/product-management-system/api/api.csproj",
         "packagesPath": "/Users/arshiasalehi/.nuget/packages/",
-        "outputPath": "/Users/arshiasalehi/Downloads/product-management-system-main-2/api/obj/",
+        "outputPath": "/Users/arshiasalehi/Downloads/product-management-system/api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/arshiasalehi/.nuget/NuGet/NuGet.Config"
