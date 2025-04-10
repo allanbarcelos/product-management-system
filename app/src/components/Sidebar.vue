@@ -3,17 +3,22 @@
 </script>
 
 <template>
-
     <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
         <div class="sb-sidenav-menu">
             <div class="nav">
                 <div class="sb-sidenav-menu-heading">Core</div>
-                <a class="nav-link" href="index.html">
+                <router-link class="nav-link" to="/">
                     <div class="sb-nav-link-icon">
                         <!-- <i class="fas fa-tachometer-alt"></i> -->
                     </div>
                     Dashboard
-                </a>
+                </router-link>
+                <router-link class="nav-link" to="/products">
+                    <div class="sb-nav-link-icon">
+                        <!-- <i class="fas fa-tachometer-alt"></i> -->
+                    </div>
+                    Product Listing Page
+                </router-link>
                 <div class="sb-sidenav-menu-heading">Interface</div>
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts"
                     aria-expanded="false" aria-controls="collapseLayouts">
@@ -98,5 +103,4 @@
             Start Bootstrap
         </div>
     </nav>
-
 </template>

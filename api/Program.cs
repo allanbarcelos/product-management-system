@@ -106,6 +106,9 @@ if(!app.Environment.IsDevelopment()){
     app.UseHttpsRedirection();
 }
 
+// Enable CORS
+app.UseCors("AllowLocalhost");
+
 app.UseAuthentication();
 app.UseAuthorization();
 
