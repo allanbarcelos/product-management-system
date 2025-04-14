@@ -20,7 +20,6 @@
                     </div>
                     Categories
                 </router-link>
-                </a>
                 <a class="nav-link" href="/products">
                     <div class="sb-nav-link-icon">
                         <!-- <i class="fas fa-tachometer-alt"></i> -->
