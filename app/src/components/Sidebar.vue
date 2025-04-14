@@ -8,24 +8,29 @@
         <div class="sb-sidenav-menu">
             <div class="nav">
                 <div class="sb-sidenav-menu-heading">Core</div>
-                <a class="nav-link" href="index.html">
+                <router-link class="nav-link" to="/">
                     <div class="sb-nav-link-icon">
                         <!-- <i class="fas fa-tachometer-alt"></i> -->
                     </div>
                     Dashboard
-                </a>
-                <a class="nav-link" href="/products">
+                </router-link>
+                <router-link class="nav-link" to="/category">
+                    <div class="sb-nav-link-icon">
+                    </div>
+                    Categories
+                </router-link>
+                <router-link class="nav-link" to="/products">
                     <div class="sb-nav-link-icon">
                         <!-- <i class="fas fa-tachometer-alt"></i> -->
                     </div>
                     Product Listing Page
-                </a>
-                <a class="nav-link" href="/orders">
+                </router-link>
+                <router-link class="nav-link" to="/orders">
                     <div class="sb-nav-link-icon">
                         <!-- <i class="fas fa-tachometer-alt"></i> -->
                     </div>
                     Order Listing Page
-                </a>
+                </router-link>
                 <div class="sb-sidenav-menu-heading">Interface</div>
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts"
                     aria-expanded="false" aria-controls="collapseLayouts">
@@ -67,8 +72,12 @@
                         <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
                             data-bs-parent="#sidenavAccordionPages">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="/auth/login">Login</a>
-                                <a class="nav-link" href="/auth/register">Register</a>
+                                <router-link class="nav-link" to="/auth/login">
+                                    Login
+                                </router-link>
+                                <router-link class="nav-link" to="/auth/register">
+                                    Register
+                                </router-link>
                                 <a class="nav-link" href="password.html">Forgot Password</a>
                             </nav>
                         </div>
