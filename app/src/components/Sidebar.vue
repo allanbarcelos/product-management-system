@@ -14,24 +14,23 @@
                     </div>
                     Dashboard
                 </router-link>
-                <router-link class="nav-link" to="/categories">
+                <router-link class="nav-link" to="/category">
                     <div class="sb-nav-link-icon">
-                        <!-- Add an icon here if needed -->
                     </div>
                     Categories
                 </router-link>
-                <a class="nav-link" href="/products">
+                <router-link class="nav-link" to="/products">
                     <div class="sb-nav-link-icon">
                         <!-- <i class="fas fa-tachometer-alt"></i> -->
                     </div>
                     Product Listing Page
-                </a>
-                <a class="nav-link" href="/orders">
+                </router-link>
+                <router-link class="nav-link" to="/orders">
                     <div class="sb-nav-link-icon">
                         <!-- <i class="fas fa-tachometer-alt"></i> -->
                     </div>
                     Order Listing Page
-                </a>
+                </router-link>
                 <div class="sb-sidenav-menu-heading">Interface</div>
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts"
                     aria-expanded="false" aria-controls="collapseLayouts">
