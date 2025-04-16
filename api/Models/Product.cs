@@ -88,5 +88,7 @@ namespace api.Models
                 );
             }
         }
+        //Many to Many Relationship between order and product
+        public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
     }
 }
