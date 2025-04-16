@@ -34,24 +34,29 @@ const router = createRouter({
           component: () => import('./../views/home/Home.vue')
         },
         {
-          path: 'orders',
-          name: 'Orders',
-          component: () => import('./../views/orders/List.vue')
-        }
-      ]
-    },
-
+{
+  path: '/categories',
+  component: () => import('@/layouts/CategoryLayout.vue'),
+  meta: { requireAuth: true },
+  children: [
     {
-      path: '/categories',
-      component: () => import('@/layouts/CategoryLayout.vue'),
-      meta: { requireAuth: true },
-      children: [
-        {
-          path: '',
-          name: 'Categories',
-          component: () => import('@/views/category/Category.vue')
-        }
-      ]
+      path: '',
+      name: 'Categories',
+      component: () => import('@/views/category/Category.vue')
+    },
+    {
+      path: 'products',
+      name: 'Products',
+      component: () => import('./../views/products/List.vue')
+    },
+    {
+      path: 'orders',
+      name: 'Orders',
+      component: () => import('./../views/orders/List.vue')
+    }
+  ]
+}
+
     }
   ]
 });

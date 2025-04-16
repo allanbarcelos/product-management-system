@@ -22,7 +22,6 @@
     </select>
   </div>
 
-
   <div class="filter-box" style="margin-top: 10px;">
     <button @click="fetchData" class="search-btn">Search</button>
   </div>
@@ -62,7 +61,7 @@ export default {
     };
   },
   mounted() {
-    this.fetchData(); 
+    this.fetchData();
   },
   methods: {
     async fetchData() {
@@ -94,8 +93,7 @@ table {
   width: 60%;
 }
 
-th,
-td {
+th, td {
   border: 1px solid #ccc;
   padding: 10px;
   text-align: center;
@@ -114,6 +112,7 @@ th {
   border-radius: 4px;
   cursor: pointer;
 }
+
 .search-btn:hover {
   background-color: #005fa3;
 }

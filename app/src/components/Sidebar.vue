@@ -14,6 +14,7 @@
                     </div>
                     Dashboard
                 </a>
+
                 <a class="nav-link" href="/orders">
                     <div class="sb-nav-link-icon">
                         <!-- <i class="fas fa-tachometer-alt"></i> -->
@@ -61,8 +62,8 @@
                         <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
                             data-bs-parent="#sidenavAccordionPages">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="login.html">Login</a>
-                                <a class="nav-link" href="register.html">Register</a>
+                                <a class="nav-link" href="/auth/login">Login</a>
+                                <a class="nav-link" href="/auth/register">Register</a>
                                 <a class="nav-link" href="password.html">Forgot Password</a>
                             </nav>
                         </div>
