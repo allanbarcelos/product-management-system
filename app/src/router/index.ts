@@ -9,7 +9,7 @@ const router = createRouter({
       path: '/auth',
       name: 'Auth',
       component: AuthLayout,
-      redirect: {name: 'Login'},
+      redirect: { name: 'Login' },
       children: [
         {
           path: 'login',
@@ -34,16 +34,29 @@ const router = createRouter({
           component: () => import('./../views/home/Home.vue')
         },
         {
-          path: 'products',
-          name: 'Products',
-          component: () => import('./../views/products/List.vue')
-        },
-        {
-          path: 'orders',
-          name: 'Orders',
-          component: () => import('./../views/orders/List.vue')
-        },
-      ]
+{
+  path: '/categories',
+  component: () => import('@/layouts/CategoryLayout.vue'),
+  meta: { requireAuth: true },
+  children: [
+    {
+      path: '',
+      name: 'Categories',
+      component: () => import('@/views/category/Category.vue')
+    },
+    {
+      path: 'products',
+      name: 'Products',
+      component: () => import('./../views/products/List.vue')
+    },
+    {
+      path: 'orders',
+      name: 'Orders',
+      component: () => import('./../views/orders/List.vue')
+    }
+  ]
+}
+
     }
   ]
 });
@@ -53,9 +66,10 @@ router.beforeEach((to, from, next) => {
   const isAuthenticated = !!localStorage.getItem('token');
 
   if (to.matched.some(record => record.meta.requireAuth) && !isAuthenticated) {
-    next({name: 'Auth'});
-  }else {
-  next();}
+    next({ name: 'Auth' });
+  } else {
+    next();
+  }
 })
 
 export default router
