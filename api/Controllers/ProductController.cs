@@ -107,5 +107,48 @@ namespace api.Controllers
             await _context.SaveChangesAsync();
             return NoContent();
         }
+
+        // GET: api/product/filter
+        [HttpGet("filter")]
+        public async Task<ActionResult<IEnumerable<Product>>> GetFilteredProducts(
+            [FromQuery] string? name,
+            [FromQuery] int? minStock,
+            [FromQuery] decimal? minPrice,
+            [FromQuery] decimal? maxPrice,
+            [FromQuery] int page = 1,
+            [FromQuery] int pageSize = 10)
+        {
+            var query = _context.Products.AsQueryable();
+
+            if (!string.IsNullOrEmpty(name))
+                query = query.Where(p => p.Name.Contains(name));
+
+            if (minStock.HasValue)
+                query = query.Where(p => p.StockQuantity >= minStock.Value);
+
+            if (minPrice.HasValue)
+                query = query.Where(p => p.Price >= minPrice.Value);
+
+            if (maxPrice.HasValue)
+                query = query.Where(p => p.Price <= maxPrice.Value);
+
+            var totalItems = await query.CountAsync();
+            var totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
+
+            var products = await query
+                .OrderBy(p => p.Name)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            return Ok(new
+            {
+                totalItems,
+                totalPages,
+                currentPage = page,
+                items = products
+            });
+        }
+
     }
 }
